@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIGITAL DREAMS | Creative Ideas. Digital Impact.</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased selection:bg-brand-cyan selection:text-white">
+
+  <!-- ==================== 1. STICKY GLASSMORPHIC NAVIGATION BAR ==================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo (Animated Pixel-Dispersing 'D') -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-brand-cyan/50 transition-all shadow-lg">
+            <!-- Custom Precision SVG matching Digital Dreams Logo -->
+            <svg viewBox="0 0 120 110" class="w-9 h-9 overflow-visible" aria-label="Digital Dreams Logo">
+              <defs>
+                <linearGradient id="navDGradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00A8E8" />
+                  <stop offset="52%" stop-color="#2B59C3" />
+                  <stop offset="100%" stop-color="#6A11CB" />
+                </linearGradient>
+                <linearGradient id="navDGradInner" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00A8E8" />
+                  <stop offset="100%" stop-color="#3B82F6" />
+                </linearGradient>
+              </defs>
+              <!-- Dispersing Pixels Top-Left -->
+              <rect class="logo-pixel" x="8" y="16" width="5" height="5" rx="1" fill="#FFC107" />
+              <rect class="logo-pixel" x="17" y="12" width="7" height="7" rx="1.2" fill="#FF9800" />
+              <rect class="logo-pixel" x="21" y="29" width="5" height="5" rx="1" fill="#FF9800" />
+              <rect class="logo-pixel" x="28" y="8" width="6" height="6" rx="1" fill="#E91E63" />
+              <rect class="logo-pixel" x="28" y="19" width="11" height="11" rx="1.5" fill="#E91E63" />
+              <rect class="logo-pixel" x="30" y="34" width="8" height="8" rx="1.2" fill="#E91E63" />
+              <rect class="logo-pixel" x="41" y="6" width="12" height="12" rx="1.5" fill="#1D4ED8" />
+              <rect class="logo-pixel" x="42" y="25" width="9" height="9" rx="1.2" fill="#1D4ED8" />
+              <rect class="logo-pixel" x="44" y="40" width="9" height="9" rx="1.2" fill="#1D4ED8" />
+              <rect class="logo-pixel" x="57" y="6" width="7" height="7" rx="1.2" fill="#00A8E8" />
+              <rect class="logo-pixel" x="52" y="16" width="12" height="10" rx="1.5" fill="#00A8E8" />
+              <rect class="logo-pixel" x="55" y="31" width="11" height="11" rx="1.5" fill="#00A8E8" />
+              <rect class="logo-pixel" x="54" y="48" width="7" height="7" rx="1.2" fill="#00A8E8" />
+              <!-- Stylized D Body -->
+              <path d="M68 6 H84 C104 6 116 21 116 44 C116 67 104 82 84 82 H62 V58 H68 V66 H82 C93 66 99 57 99 44 C99 31 93 22 82 22 H68 Z" fill="url(#navDGradMain)" />
+              <path d="M58 58 H68 V82 H58 Z" fill="url(#navDGradInner)" />
+              <path d="M76 22 H83 C95 22 103 31 103 44 C103 57 95 66 83 66 H76 V22 Z" fill="#050814" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-lg sm:text-xl tracking-wider text-white leading-none">
+              DIGITAL <span class="text-brand-cyan">DREAMS</span>
+            </span>
+            <span class="text-[10px] tracking-[0.2em] text-slate-400 uppercase mt-1">Creative Ideas. Digital Impact.</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#services" class="hover:text-brand-cyan transition-colors py-2">Services & Pricing</a>
+          <a href="#estimator" class="hover:text-brand-cyan transition-colors py-2 flex items-center gap-1.5">
+            <span>Package Estimator</span>
+            <span id="nav-cart-badge" class="hidden px-2 py-0.5 text-[11px] font-bold rounded-full bg-brand-cyan text-slate-950">0</span>
+          </a>
+          <a href="#process" class="hover:text-brand-cyan transition-colors py-2">How It Works</a>
+          <a href="#terms" class="hover:text-brand-cyan transition-colors py-2">Terms & FAQ</a>
+          <a href="#contact" class="hover:text-brand-cyan transition-colors py-2">Contact</a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/919319818037?text=Hi%20Digital%20Dreams!%20I%20would%20like%20to%20discuss%20a%20digital%20project."
+             target="_blank" rel="noopener noreferrer"
+             class="animate-pulse-glow inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-semibold text-xs sm:text-sm shadow-lg transition-all transform hover:scale-105">
+            <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+            <span class="hidden sm:inline">+91 9319818037</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-brand-cyan hover:border-brand-cyan/40 transition-colors">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#070B1E]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-5 space-y-3">
+      <a href="#services" class="mobile-link block py-2.5 text-base font-medium text-slate-200 hover:text-brand-cyan border-b border-white/5">Services & Pricing</a>
+      <a href="#estimator" class="mobile-link block py-2.5 text-base font-medium text-slate-200 hover:text-brand-cyan border-b border-white/5">Interactive Package Estimator</a>
+      <a href="#process" class="mobile-link block py-2.5 text-base font-medium text-slate-200 hover:text-brand-cyan border-b border-white/5">How It Works</a>
+      <a href="#terms" class="mobile-link block py-2.5 text-base font-medium text-slate-200 hover:text-brand-cyan border-b border-white/5">Terms & Conditions</a>
+      <a href="#contact" class="mobile-link block py-2.5 text-base font-medium text-slate-200 hover:text-brand-cyan">Contact Digital Dreams</a>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HIGH-IMPACT HERO SECTION ==================== -->
+  <section id="top" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-cyber-grid">
+    <!-- Interactive HTML5 Particle/Pixel Canvas -->
+    <canvas id="hero-pixel-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- Ambient Radial Glows -->
+    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-brand-cyan/20 rounded-full blur-[128px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-brand-violet/25 rounded-full blur-[128px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Copy & CTAs -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <!-- Tagline Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-brand-cyan/30 backdrop-blur-md shadow-inner">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-cyan animate-ping"></span>
+            <span class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-brand-cyan">
+              YOUR COMPLETE DIGITAL GROWTH PARTNER
+            </span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.06]">
+            <span class="block text-white">DIGITAL</span>
+            <span class="block text-brand-gradient">DREAMS</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="font-display text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-200 tracking-wide">
+            CREATIVE IDEAS. <span class="text-brand-cyan">DIGITAL IMPACT.</span>
+          </p>
+
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            From high-converting brand identities and AI video advertisements to full-scale websites and ROI-focused social media campaigns—we engineer digital assets that accelerate your brand.
+          </p>
+
+          <!-- 5 Core Pillars Pills -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+            <span class="px-3.5 py-1.5 rounded-xl bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+              <i class="fa-solid fa-pen-nib"></i> Design
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-brand-royal/15 border border-brand-royal/40 text-blue-300 text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+              <i class="fa-solid fa-code"></i> Development
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-brand-violet/15 border border-brand-violet/40 text-purple-300 text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> AI
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-brand-magenta/15 border border-brand-magenta/40 text-pink-300 text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+              <i class="fa-solid fa-bullhorn"></i> Marketing
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-brand-amber/15 border border-brand-amber/40 text-amber-300 text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+              <i class="fa-solid fa-feather-pointed"></i> Content
+            </span>
+          </div>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#services" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-brand-cyan via-brand-royal to-brand-violet hover:opacity-95 text-white font-bold text-sm sm:text-base shadow-xl shadow-brand-cyan/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2.5">
+              <span>Explore Services & Pricing</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="https://wa.me/919319818037?text=Hi%20Digital%20Dreams!%20I%20want%20an%20instant%20quote%20for%20my%20project."
+               target="_blank" rel="noopener noreferrer"
+               class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/15 hover:border-emerald-400/50 text-white font-bold text-sm sm:text-base transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+              <span>Instant WhatsApp Quote</span>
+            </a>
+          </div>
+
+          <div class="pt-1 flex justify-center lg:justify-start">
+            <a href="#estimator" class="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-brand-cyan transition-colors group">
+              <i class="fa-solid fa-calculator text-brand-cyan"></i>
+              <span>Or Build Your Custom Package & Calculate 50% Advance</span>
+              <i class="fa-solid fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Animated Hero Centerpiece SVG & Floating Glass Badges -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+          <div class="relative w-full max-w-md aspect-square flex items-center justify-center">
+            <!-- Rotating Cyber Halo Rings -->
+            <div class="absolute inset-4 rounded-full border border-dashed border-brand-cyan/25 animate-[spin_28s_linear_infinite]"></div>
+            <div class="absolute inset-12 rounded-full border border-brand-violet/30 animate-[spin_20s_linear_infinite_reverse]"></div>
+
+            <!-- Hero Centerpiece Animated SVG Logo -->
+            <div class="relative z-10 w-72 sm:w-80 animate-float drop-shadow-[0_25px_45px_rgba(0,168,232,0.3)]">
+              <svg viewBox="0 0 260 220" class="w-full h-auto overflow-visible" aria-label="Digital Dreams Hero Emblem">
+                <defs>
+                  <linearGradient id="heroDMain" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00A8E8" />
+                    <stop offset="55%" stop-color="#2B59C3" />
+                    <stop offset="100%" stop-color="#6A11CB" />
+                  </linearGradient>
+                  <linearGradient id="heroDAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00A8E8" />
+                    <stop offset="100%" stop-color="#38BDF8" />
+                  </linearGradient>
+                  <filter id="glowBlur" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Disintegrating Pixel Cluster (Top-Left, faithful to uploaded logo) -->
+                <g filter="url(#glowBlur)">
+                  <!-- Far Left Amber & Orange -->
+                  <rect class="logo-pixel" x="14" y="38" width="9" height="9" rx="1.5" fill="#FFC107" />
+                  <rect class="logo-pixel" x="30" y="31" width="13" height="13" rx="2" fill="#FF9800" />
+                  <rect class="logo-pixel" x="38" y="64" width="9" height="9" rx="1.5" fill="#FF9800" />
+
+                  <!-- Magenta / Pink Pixels -->
+                  <rect class="logo-pixel" x="54" y="21" width="12" height="12" rx="2" fill="#E91E63" />
+                  <rect class="logo-pixel" x="54" y="42" width="22" height="22" rx="2.5" fill="#E91E63" />
+                  <rect class="logo-pixel" x="58" y="72" width="16" height="16" rx="2" fill="#E91E63" />
+
+                  <!-- Deep Royal Blue Pixels -->
+                  <rect class="logo-pixel" x="82" y="16" width="26" height="26" rx="3" fill="#1D4ED8" />
+                  <rect class="logo-pixel" x="83" y="54" width="19" height="19" rx="2.5" fill="#1D4ED8" />
+                  <rect class="logo-pixel" x="89" y="84" width="19" height="19" rx="2.5" fill="#1D4ED8" />
+
+                  <!-- Cyan / Sky Blue Pixels -->
+                  <rect class="logo-pixel" x="116" y="16" width="13" height="13" rx="2" fill="#00A8E8" />
+                  <rect class="logo-pixel" x="103" y="36" width="26" height="21" rx="2.5" fill="#00A8E8" />
+                  <rect class="logo-pixel" x="113" y="66" width="22" height="22" rx="2.5" fill="#00A8E8" />
+                  <rect class="logo-pixel" x="110" y="102" width="13" height="13" rx="2" fill="#00A8E8" />
+                </g>
+
+                <!-- Main Stylized 'D' Outer Ribbon -->
+                <path d="M138 16 H172 C214 16 240 46 240 94 C240 142 214 172 172 172 H118 V122 H138 V142 H169 C193 142 206 123 206 94 C206 65 193 46 169 46 H138 Z" fill="url(#heroDMain)" />
+                
+                <!-- Left Vertical Cyan Accent Pillar -->
+                <path d="M118 122 H138 V172 H118 Z" fill="url(#heroDAccent)" />
+
+                <!-- Inner Cutout Counter -->
+                <path d="M154 46 H169 C193 46 206 65 206 94 C206 123 193 142 169 142 H154 Z" fill="#050814" />
+              </svg>
+            </div>
+
+            <!-- Floating Glass Metric Card 1 -->
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-2xl glass-card absolute -top-2 right-0 animate-float-delayed shadow-2xl">
+              <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center font-bold">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Introductory Plans</div>
+                <div class="text-sm font-bold text-white">Starting at ₹199</div>
+              </div>
+            </div>
+
+            <!-- Floating Glass Metric Card 2 -->
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-2xl glass-card absolute bottom-4 -left-4 animate-float shadow-2xl">
+              <div class="w-10 h-10 rounded-xl bg-brand-magenta/20 text-brand-magenta flex items-center justify-center font-bold">
+                <i class="fa-solid fa-rotate"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Quality Guarantee</div>
+                <div class="text-sm font-bold text-white">2 Free Revisions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Highlights Strip -->
+      <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4 reveal-up">
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-cyan/15 text-brand-cyan flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-white">5 Verticals</div>
+            <div class="text-xs sm:text-sm text-slate-400">End-to-End Digital Growth</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-white">From ₹199</div>
+            <div class="text-xs sm:text-sm text-slate-400">Transparent Starting Rates</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-violet/20 text-purple-400 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-check-double"></i>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-white">2 Revisions</div>
+            <div class="text-xs sm:text-sm text-slate-400">Included Free Per Service</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-amber/15 text-amber-400 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-white">50% Advance</div>
+            <div class="text-xs sm:text-sm text-slate-400">Fast Kickoff & Ownership</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infinite Marquee Banner -->
+  <div class="border-y border-white/10 bg-white/[0.02] py-3.5 overflow-hidden select-none">
+    <div class="flex whitespace-nowrap animate-marquee">
+      <div class="flex items-center gap-8 px-4 text-xs sm:text-sm font-display font-semibold tracking-widest uppercase text-slate-300">
+        <span class="text-brand-cyan">✦ LOGO DESIGN</span>
+        <span>•</span>
+        <span class="text-purple-400">✦ AI VIDEO ADVERTISEMENTS</span>
+        <span>•</span>
+        <span class="text-pink-400">✦ SOCIAL MEDIA CAMPAIGNS</span>
+        <span>•</span>
+        <span class="text-amber-400">✦ BUSINESS & E-COMMERCE WEBSITES</span>
+        <span>•</span>
+        <span class="text-emerald-400">✦ YOUTUBE THUMBNAILS & SCRIPTS</span>
+        <span>•</span>
+        <span class="text-brand-cyan">✦ SEO & LEAD GENERATION</span>
+        <span>•</span>
+      </div>
+      <div class="flex items-center gap-8 px-4 text-xs sm:text-sm font-display font-semibold tracking-widest uppercase text-slate-300" aria-hidden="true">
+        <span class="text-brand-cyan">✦ LOGO DESIGN</span>
+        <span>•</span>
+        <span class="text-purple-400">✦ AI VIDEO ADVERTISEMENTS</span>
+        <span>•</span>
+        <span class="text-pink-400">✦ SOCIAL MEDIA CAMPAIGNS</span>
+        <span>•</span>
+        <span class="text-amber-400">✦ BUSINESS & E-COMMERCE WEBSITES</span>
+        <span>•</span>
+        <span class="text-emerald-400">✦ YOUTUBE THUMBNAILS & SCRIPTS</span>
+        <span>•</span>
+        <span class="text-brand-cyan">✦ SEO & LEAD GENERATION</span>
+        <span>•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 3. INTERACTIVE SERVICES & PRICING HUB ==================== -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal-up">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold tracking-widest uppercase mb-3">
+          Official Menu & Rate Card
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl text-white mb-4">
+          Our Services & <span class="text-brand-gradient">Pricing</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Clear, creative solutions to help your brand grow. Click <strong class="text-white">"+ Add to Estimate"</strong> on any service below to build a custom package and calculate your instant quote.
+        </p>
+      </div>
+
+      <!-- Search & Category Filter Controls -->
+      <div class="mb-10 space-y-5 reveal-up">
+        <!-- Search Bar -->
+        <div class="max-w-md mx-auto relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input type="text" id="service-search" placeholder="Search services (e.g., Logo, AI Video, Website, SEO)..."
+                 class="w-full pl-11 pr-4 py-3 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-cyan focus:outline-none text-sm text-white placeholder-slate-400 transition-colors" />
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div id="category-tabs" class="flex flex-wrap items-center justify-center gap-2.5">
+          <button data-category="all" class="cat-tab active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-brand-cyan to-brand-royal text-white shadow-lg shadow-brand-cyan/25">
+            All Services (28)
+          </button>
+          <button data-category="design" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10">
+            1. Creative Design
+          </button>
+          <button data-category="marketing" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10">
+            2. Digital Marketing
+          </button>
+          <button data-category="content" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10">
+            3. Script & Content
+          </button>
+          <button data-category="aivideo" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10">
+            4. AI Video & Production
+          </button>
+          <button data-category="webdev" class="cat-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10">
+            5. Website Development
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Services Grid Container -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically via JavaScript for lightning-fast filtering & state sync -->
+      </div>
+
+      <!-- Empty Search State -->
+      <div id="no-services-found" class="hidden text-center py-16 glass-card rounded-3xl">
+        <i class="fa-solid fa-compass text-4xl text-slate-500 mb-3"></i>
+        <h3 class="text-xl font-bold text-white">No matching services found</h3>
+        <p class="text-slate-400 text-sm mt-1">Try clearing your search term or selecting "All Services".</p>
+        <button id="reset-filters-btn" class="mt-4 px-5 py-2.5 rounded-xl bg-brand-cyan text-slate-950 font-bold text-sm hover:opacity-90 transition-opacity">
+          Reset Filters
+        </button>
+      </div>
+
+      <!-- Official Pricing Disclaimer -->
+      <div class="mt-12 p-5 sm:p-6 rounded-2xl bg-amber-500/5 border border-amber-500/20 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs sm:text-sm text-slate-300 reveal-up">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 text-lg">
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <p class="leading-relaxed">
+          <strong class="text-amber-300">Pricing Note:</strong> All prices are introductory starting prices. Final quotations depend on project scope, content, revisions and delivery requirements. Advertising spend, domain and hosting charges (where applicable) are separate.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. INTERACTIVE PROJECT QUOTE ESTIMATOR ==================== -->
+  <section id="estimator" class="py-24 relative bg-gradient-to-b from-transparent via-brand-royal/5 to-transparent">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="gradient-border-box p-6 sm:p-10 shadow-2xl reveal-up">
+        <div class="flex flex-col lg:flex-row gap-10">
+          
+          <!-- Left: Selected Services List -->
+          <div class="lg:w-7/12 space-y-6">
+            <div>
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-violet/20 border border-brand-violet/40 text-purple-300 text-xs font-bold uppercase tracking-wider mb-2">
+                <i class="fa-solid fa-calculator"></i> Smart Quote Builder
+              </span>
+              <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+                Custom Package <span class="text-brand-cyan">Estimator</span>
+              </h2>
+              <p class="text-slate-400 text-sm mt-1">
+                Select services from the menu above or quick-add popular bundles below. Your 50% advance kickoff amount is calculated automatically.
+              </p>
+            </div>
+
+            <!-- Quick Preset Bundles -->
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-slate-400 self-center mr-1">Quick Presets:</span>
+              <button onclick="applyPreset(['logo', 'sm-post', 'yt-thumb'])" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-brand-cyan/20 border border-white/10 hover:border-brand-cyan/40 text-xs text-slate-200 transition-colors">
+                + Creator Starter Kit
+              </button>
+              <button onclick="applyPreset(['landing-page', 'ad-script', 'ai-video'])" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-brand-cyan/20 border border-white/10 hover:border-brand-cyan/40 text-xs text-slate-200 transition-colors">
+                + AI Launch Funnel
+              </button>
+              <button onclick="applyPreset(['biz-web', 'smm-monthly', 'logo'])" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-brand-cyan/20 border border-white/10 hover:border-brand-cyan/40 text-xs text-slate-200 transition-colors">
+                + Brand Growth Pack
+              </button>
+            </div>
+
+            <!-- Selected Items Container -->
+            <div id="estimator-items-list" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+              <!-- Populated by JS -->
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-white/10">
+              <a href="#services" class="text-xs sm:text-sm font-semibold text-brand-cyan hover:underline flex items-center gap-1.5">
+                <i class="fa-solid fa-plus"></i> Browse & Add More Services
+              </a>
+              <button id="clear-estimate-btn" class="hidden text-xs text-rose-400 hover:text-rose-300 font-medium">
+                <i class="fa-solid fa-trash-can mr-1"></i> Clear All
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Cost Breakdown & Instant WhatsApp Order -->
+          <div class="lg:w-5/12 bg-[#060918] rounded-2xl p-6 border border-white/10 flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <h3 class="font-display font-bold text-lg text-white border-b border-white/10 pb-3 flex items-center justify-between">
+                <span>Estimate Summary</span>
+                <span id="est-count-pill" class="text-xs px-2.5 py-1 rounded-full bg-brand-cyan/15 text-brand-cyan">0 Items</span>
+              </h3>
+
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between text-slate-300">
+                  <span>Estimated Starting Total:</span>
+                  <span id="est-total" class="font-display font-bold text-xl text-white">₹0</span>
+                </div>
+
+                <div id="custom-items-note" class="hidden p-3 rounded-xl bg-purple-500/10 border border-purple-500/25 text-xs text-purple-200">
+                  <i class="fa-solid fa-sparkles mr-1 text-purple-400"></i>
+                  Includes <strong id="custom-items-count">0</strong> custom-priced service(s). We will share an exact tailored quote on WhatsApp!
+                </div>
+
+                <div class="p-4 rounded-xl bg-brand-cyan/10 border border-brand-cyan/25 space-y-1.5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-brand-cyan">50% Advance to Start</span>
+                    <span id="est-advance" class="font-display font-extrabold text-xl text-brand-cyan">₹0</span>
+                  </div>
+                  <div class="flex justify-between text-xs text-slate-400">
+                    <span>Remaining on Final Delivery (50%):</span>
+                    <span id="est-balance">₹0</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Optional Client Name / Notes Input -->
+              <div class="space-y-2 pt-2">
+                <label for="client-project-note" class="block text-xs font-medium text-slate-400">Your Name / Brand & Brief Requirement (Optional)</label>
+                <input type="text" id="client-project-note" placeholder="e.g., Rahul — Need Logo + Landing Page"
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 focus:border-brand-cyan focus:outline-none text-xs sm:text-sm text-white placeholder-slate-500" />
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <button id="send-whatsapp-quote-btn"
+                      class="w-full py-4 px-5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Send Order Inquiry on WhatsApp</span>
+              </button>
+              <p class="text-[11px] text-center text-slate-400">
+                Opens WhatsApp chat with <strong class="text-slate-200">+91 9319818037</strong> with your selected services pre-filled.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. HOW IT WORKS (4-STEP WORKFLOW) ==================== -->
+  <section id="process" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-brand-royal/20 border border-brand-royal/40 text-blue-300 text-xs font-bold tracking-widest uppercase mb-3">
+          Seamless Execution
+        </span>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl text-white mb-4">
+          How We Bring Ideas to <span class="text-brand-gradient">Digital Impact</span>
+        </h2>
+        <p class="text-slate-400 text-base">
+          A transparent, milestone-driven workflow designed for speed, creative excellence, and 100% ownership clarity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <!-- Step 1 -->
+        <div class="glass-card rounded-3xl p-7 relative reveal-up">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-cyan to-brand-royal text-white font-display font-bold text-xl flex items-center justify-center mb-5 shadow-lg">
+            01
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2">Select & Approve Quote</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Choose your desired services from our menu, share your content/brief, and approve the final scope quotation.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card rounded-3xl p-7 relative reveal-up" style="transition-delay: 100ms;">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-royal to-brand-violet text-white font-display font-bold text-xl flex items-center justify-center mb-5 shadow-lg">
+            02
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2">50% Advance Payment</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Confirm your order with a 50% advance payment so our creative, AI, or development specialists can immediately kick off production.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card rounded-3xl p-7 relative reveal-up" style="transition-delay: 200ms;">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-violet to-brand-magenta text-white font-display font-bold text-xl flex items-center justify-center mb-5 shadow-lg">
+            03
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2">Creation + 2 Free Revisions</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            We craft your high-impact assets and refine them with up to <strong class="text-white">2 free revisions</strong> included per service.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card rounded-3xl p-7 relative reveal-up" style="transition-delay: 300ms;">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-orange to-brand-amber text-slate-950 font-display font-bold text-xl flex items-center justify-center mb-5 shadow-lg">
+            04
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2">Balance & Full Handover</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Clear the remaining balance upon approval to receive all final high-resolution files and full ownership rights.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. TERMS & CONDITIONS (TRANSPARENT 10-POINT GRID) ==================== -->
+  <section id="terms" class="py-24 relative bg-white/[0.015] border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-up">
+        <div>
+          <span class="inline-block px-3.5 py-1 rounded-full bg-brand-magenta/15 border border-brand-magenta/30 text-pink-300 text-xs font-bold tracking-widest uppercase mb-3">
+            Client Policy & Guidelines
+          </span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+            Terms & <span class="text-brand-cyan">Conditions</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Please read these terms before confirming your order with Digital Dreams.
+          </p>
+        </div>
+
+        <!-- Quick Search / Filter inside Terms -->
+        <div class="relative w-full md:w-72">
+          <i class="fa-solid fa-filter absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input type="text" id="terms-filter" placeholder="Filter terms (e.g., advance, revisions)..."
+                 class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/10 focus:border-brand-cyan focus:outline-none text-xs sm:text-sm text-white placeholder-slate-400" />
+        </div>
+      </div>
+
+      <!-- 10-Point Terms Grid -->
+      <div id="terms-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal-up">
+        <!-- Populated cleanly via JS -->
+      </div>
+
+      <!-- Official Terms Footer Note -->
+      <div class="mt-8 p-5 rounded-2xl glass-card flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-300 reveal-up">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-brand-cyan text-xl"></i>
+          <span>By placing an order, clients agree to our Terms & Conditions. For complete Terms & Conditions, please contact <strong>Digital Dreams</strong>.</span>
+        </div>
+        <a href="tel:+919319818037" class="shrink-0 font-bold text-brand-cyan hover:underline">
+          Contact: +91 9319818037
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. HIGH-CONVERSION CONTACT & FOOTER SECTION ==================== -->
+  <section id="contact" class="py-24 relative overflow-hidden">
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-cyan/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Contact Info -->
+        <div class="lg:col-span-6 space-y-6 reveal-up">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold tracking-widest uppercase">
+            Start Your Project Today
+          </span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl text-white leading-tight">
+            LET'S GROW YOUR BUSINESS <span class="text-brand-gradient">DIGITALLY.</span>
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+            Ready to elevate your brand with standout design, AI-powered video ads, high-speed websites, or targeted marketing? Reach out directly via Call or WhatsApp for a fast response.
+          </p>
+
+          <!-- Direct Action Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <a href="https://wa.me/919319818037?text=Hi%20Digital%20Dreams!%20I%20would%20like%20to%20start%20a%20project."
+               target="_blank" rel="noopener noreferrer"
+               class="glass-card p-5 rounded-2xl flex items-center gap-4 group hover:border-emerald-400/50">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider">WhatsApp Chat</div>
+                <div class="font-display font-bold text-base sm:text-lg text-white">+91 9319818037</div>
+              </div>
+            </a>
+
+            <a href="tel:+919319818037"
+               class="glass-card p-5 rounded-2xl flex items-center gap-4 group hover:border-brand-cyan/50">
+              <div class="w-12 h-12 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider">Direct Call</div>
+                <div class="font-display font-bold text-base sm:text-lg text-white">+91 9319818037</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Quick WhatsApp Inquiry Form -->
+        <div class="lg:col-span-6 reveal-up">
+          <form id="quick-inquiry-form" class="glass-card p-7 sm:p-9 rounded-3xl space-y-5 border border-white/10">
+            <h3 class="font-display font-bold text-2xl text-white">Quick Project Inquiry</h3>
+            <p class="text-xs sm:text-sm text-slate-400">Fill out the details below and launch a pre-formatted WhatsApp message straight to our team.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Name *</label>
+                <input type="text" id="inq-name" required placeholder="Enter your name"
+                       class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-brand-cyan focus:outline-none text-sm text-white placeholder-slate-500" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Primary Category *</label>
+                <select id="inq-category" class="w-full px-4 py-3 rounded-xl bg-[#0B1024] border border-white/10 focus:border-brand-cyan focus:outline-none text-sm text-white">
+                  <option value="Creative Design">1. Creative Design Services</option>
+                  <option value="Digital Marketing">2. Digital Marketing Services</option>
+                  <option value="Script & Content Writing">3. Script & Content Writing</option>
+                  <option value="AI Video & Production">4. AI Video & Production</option>
+                  <option value="Website Development">5. Website Development</option>
+                  <option value="Complete Growth Package">Complete Digital Growth Package</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Project Details / Goals *</label>
+              <textarea id="inq-message" rows="3" required placeholder="Tell us about your brand, timeline, or specific services you need..."
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-brand-cyan focus:outline-none text-sm text-white placeholder-slate-500"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-cyan via-brand-royal to-brand-violet hover:opacity-95 text-white font-bold text-sm sm:text-base shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Send Inquiry via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#03050D] pt-14 pb-28 sm:pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-white/10">
+        <!-- Footer Logo -->
+        <div class="flex items-center gap-3.5">
+          <svg viewBox="0 0 120 110" class="w-10 h-10 overflow-visible" aria-label="Digital Dreams Footer Logo">
+            <rect class="logo-pixel" x="8" y="16" width="5" height="5" rx="1" fill="#FFC107" />
+            <rect class="logo-pixel" x="17" y="12" width="7" height="7" rx="1.2" fill="#FF9800" />
+            <rect class="logo-pixel" x="28" y="19" width="11" height="11" rx="1.5" fill="#E91E63" />
+            <rect class="logo-pixel" x="41" y="6" width="12" height="12" rx="1.5" fill="#1D4ED8" />
+            <rect class="logo-pixel" x="52" y="16" width="12" height="10" rx="1.5" fill="#00A8E8" />
+            <path d="M68 6 H84 C104 6 116 21 116 44 C116 67 104 82 84 82 H62 V58 H68 V66 H82 C93 66 99 57 99 44 C99 31 93 22 82 22 H68 Z" fill="url(#navDGradMain)" />
+            <path d="M58 58 H68 V82 H58 Z" fill="url(#navDGradInner)" />
+            <path d="M76 22 H83 C95 22 103 31 103 44 C103 57 95 66 83 66 H76 V22 Z" fill="#03050D" />
+          </svg>
+          <div>
+            <div class="font-display font-bold text-xl text-white tracking-wider">DIGITAL <span class="text-brand-cyan">DREAMS</span></div>
+            <div class="text-xs text-slate-400">CREATIVE IDEAS. DIGITAL IMPACT.</div>
+          </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+          <a href="#services" class="hover:text-brand-cyan transition-colors">Services</a>
+          <a href="#estimator" class="hover:text-brand-cyan transition-colors">Quote Estimator</a>
+          <a href="#process" class="hover:text-brand-cyan transition-colors">Process</a>
+          <a href="#terms" class="hover:text-brand-cyan transition-colors">Terms & Conditions</a>
+          <a href="#contact" class="hover:text-brand-cyan transition-colors">Contact</a>
+        </div>
+
+        <!-- Contact Number -->
+        <div class="text-center md:text-right">
+          <div class="text-xs text-slate-400 uppercase tracking-wider">Call / WhatsApp</div>
+          <a href="tel:+919319818037" class="font-display font-bold text-lg text-brand-cyan hover:text-white transition-colors">
+            +91 9319818037
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 DIGITAL DREAMS. Your Complete Digital Growth Partner. All rights reserved.</p>
+        <p>Design • Development • AI • Marketing • Content</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING STICKY ESTIMATOR BAR (Appears when items are added) -->
+  <div id="floating-estimator-bar" class="fixed bottom-4 left-4 right-4 z-40 max-w-4xl mx-auto translate-y-32 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="glass-card border border-brand-cyan/40 rounded-2xl p-3.5 sm:px-6 sm:py-4 shadow-[0_15px_40px_rgba(0,0,0,0.75)] flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+        <div class="flex items-center gap-2.5">
+          <span id="float-bar-count" class="w-8 h-8 rounded-xl bg-brand-cyan text-slate-950 font-bold text-sm flex items-center justify-center">0</span>
+          <div>
+            <div class="text-xs text-slate-400">Selected Package Estimate</div>
+            <div class="font-display font-bold text-base sm:text-lg text-white">
+              <span id="float-bar-total">₹0</span>
+              <span class="text-xs font-normal text-brand-cyan ml-1.5">(50% Adv: <span id="float-bar-adv">₹0</span>)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 w-full sm:w-auto">
+        <a href="#estimator" class="flex-1 sm:flex-initial text-center px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-semibold transition-colors">
+          Review List
+        </a>
+        <button onclick="sendWhatsAppEstimate()" class="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white text-xs sm:text-sm font-bold shadow-lg flex items-center justify-center gap-2 transition-all">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Order on WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Non-Intrusive Toast Notification -->
+  <div id="toast-notification" class="fixed top-24 right-4 z-50 translate-x-full opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="px-4 py-3 rounded-xl bg-[#0D142E] border border-brand-cyan/40 text-white text-xs sm:text-sm font-medium shadow-2xl flex items-center gap-2.5">
+      <i class="fa-solid fa-circle-check text-brand-cyan"></i>
+      <span id="toast-message">Added to estimate!</span>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT: DATA, ANIMATIONS, CANVAS & INTERACTIVITY ==================== -->
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

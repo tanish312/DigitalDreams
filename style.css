@@ -1,0 +1,132 @@
+/* Custom Cyber-Creative Agency Styling & 60fps Hardware Acceleration */
+    :root {
+      --cyan: #00A8E8;
+      --royal: #2B59C3;
+      --violet: #6A11CB;
+      --magenta: #E91E63;
+      --orange: #FF9800;
+      --amber: #FFC107;
+    }
+
+    body {
+      background-color: #050814;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050814;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00A8E8, #6A11CB);
+      border-radius: 9999px;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-nav {
+      background: rgba(5, 8, 20, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: linear-gradient(145deg, rgba(16, 23, 48, 0.78) 0%, rgba(9, 13, 29, 0.9) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(0, 168, 232, 0.45);
+      box-shadow: 0 20px 40px -15px rgba(0, 168, 232, 0.2), 0 0 25px -5px rgba(106, 17, 203, 0.25);
+    }
+
+    /* Animated Gradient Text */
+    .text-brand-gradient {
+      background: linear-gradient(90deg, #00A8E8 0%, #3B82F6 35%, #8B5CF6 70%, #E91E63 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-x 5s ease infinite;
+    }
+
+    /* Animated Gradient Border */
+    .gradient-border-box {
+      position: relative;
+      border-radius: 1.25rem;
+      background: #0B1024;
+    }
+    .gradient-border-box::before {
+      content: "";
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 1.35rem;
+      background: linear-gradient(120deg, #00A8E8, #2B59C3, #6A11CB, #E91E63, #FF9800);
+      background-size: 300% 300%;
+      animation: gradient-x 6s ease infinite;
+      z-index: -1;
+      opacity: 0.75;
+    }
+
+    /* Pixel Logo Floating Micro-Animations */
+    .logo-pixel {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pixel-drift 3.8s ease-in-out infinite alternate;
+    }
+    .logo-pixel:nth-child(odd) {
+      animation-duration: 4.4s;
+      animation-delay: -1.2s;
+    }
+    .logo-pixel:nth-child(3n) {
+      animation-duration: 3.2s;
+      animation-delay: -2.1s;
+    }
+    @keyframes pixel-drift {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(-3.5px, -2.5px) scale(1.06); }
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Spotlight Hover Effect on Service Cards */
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 168, 232, 0.14), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .service-card:hover::after {
+      opacity: 1;
+    }
+
+    /* Subtle Cyber Grid Background */
+    .bg-cyber-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
